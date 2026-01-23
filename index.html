@@ -3,68 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yazılım Mühendisi Portfolyosu</title>
+    <title>HASAN KARA | Yazılım Mühendisi</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; }
-        .glass-card { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .gradient-text { background: linear-gradient(to right, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        body { background-color: #020617; color: #f8fafc; font-family: 'Inter', sans-serif; }
+        .glass-card { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .name-title { letter-spacing: 0.2em; text-transform: uppercase; font-weight: 900; }
     </style>
 </head>
-<body class="min-h-screen flex items-center justify-center p-4 md:p-10">
+<body class="min-h-screen py-16 px-4">
 
-    <div class="glass-card max-w-2xl w-full rounded-[2.5rem] p-8 md:p-12 shadow-2xl">
+    <div class="max-w-3xl mx-auto space-y-10">
         
-        <div class="text-center mb-10">
-            <div class="w-24 h-24 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl mx-auto mb-6 flex items-center justify-center text-3xl font-bold shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-300">
-                YM
-            </div>
-            <h1 class="text-3xl md:text-4xl font-extrabold mb-3 italic">
-                <span class="gradient-text">Geleceğin Yazılım Mühendisi</span>
+        <div class="text-center py-10">
+            <h1 class="text-4xl md:text-7xl name-title mb-4 bg-clip-text text-transparent bg-gradient-to-b from-white to-slate-500">
+                HASAN KARA
             </h1>
-            <p class="text-slate-400 font-medium tracking-wide">Fırat Üniversitesi • 1. Sınıf Öğrencisi</p>
+            <p class="text-blue-400 font-bold tracking-[0.4em] text-xs md:text-sm uppercase opacity-80">
+                Yazılım Mühendisi
+            </p>
         </div>
 
-        <div class="space-y-5">
-            <div class="flex items-center gap-5 p-5 rounded-2xl bg-slate-800/40 border border-white/5 hover:bg-slate-800/60 transition-colors">
-                <div class="text-3xl">🤖</div>
-                <div>
-                    <h3 class="font-bold text-blue-400">Robotik & Otomasyon</h3>
-                    <p class="text-sm text-slate-300">Otonom sistemler ve robotik teknolojiler üzerine kendimi geliştiriyorum.</p>
-                </div>
-            </div>
+        <section class="glass-card rounded-[2rem] p-8 md:p-10 shadow-2xl">
+            <h2 class="text-blue-500 font-black text-xs uppercase tracking-widest mb-4">Hakkımda</h2>
+            <p class="text-slate-300 leading-relaxed text-lg">
+                Fırat Üniversitesi'nde 1. sınıf Yazılım Mühendisliği öğrencisiyim. Kariyerimi <strong>Yapay Zeka ve Otomasyon</strong> alanında uzmanlaşarak inşa etmeyi hedefliyorum. Python ve Java dilleri üzerinde aktif olarak çalışmaktayım.
+            </p>
+        </section>
 
-            <div class="flex items-center gap-5 p-5 rounded-2xl bg-slate-800/40 border border-white/5 hover:bg-slate-800/60 transition-colors">
-                <div class="text-3xl">📱</div>
-                <div>
-                    <h3 class="font-bold text-indigo-400">Mobil Uygulama Geliştirme</h3>
-                    <p class="text-sm text-slate-300">Modern ve kullanıcı dostu mobil çözümler üretmek üzerine çalışıyorum.</p>
+        <section class="glass-card rounded-[2rem] p-8 md:p-10 shadow-2xl">
+            <h2 class="text-indigo-500 font-black text-xs uppercase tracking-widest mb-6">İlgi Alanları</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="p-5 rounded-2xl bg-slate-900/50 border border-white/5">
+                    <span class="text-white font-bold block mb-1">Robotik & Otomasyon</span>
+                    <p class="text-xs text-slate-400">Otonom sistemler ve kontrol mekanizmaları üzerine çalışmalar.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-slate-900/50 border border-white/5">
+                    <span class="text-white font-bold block mb-1">Mobil Uygulama</span>
+                    <p class="text-xs text-slate-400">Modern ve kullanıcı odaklı mobil çözüm araştırmaları.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-slate-900/50 border border-white/5">
+                    <span class="text-white font-bold block mb-1">Yapay Zeka</span>
+                    <p class="text-xs text-slate-400">Algoritma tasarımı ve akıllı sistemler.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-slate-900/50 border border-white/5">
+                    <span class="text-white font-bold block mb-1">Sistem Mimarisi</span>
+                    <p class="text-xs text-slate-400">Bilgisayar donanımı ve verimli yapı tasarımı.</p>
                 </div>
             </div>
+        </section>
 
-            <div class="flex items-center gap-5 p-5 rounded-2xl bg-slate-800/40 border border-white/5 hover:bg-slate-800/60 transition-colors">
-                <div class="text-3xl">🧠</div>
-                <div>
-                    <h3 class="font-bold text-emerald-400">Yapay Zeka</h3>
-                    <p class="text-sm text-slate-300">Python ve Java dilleriyle AI algoritmaları üzerine araştırmalar yapıyorum.</p>
+        <section class="glass-card rounded-[2rem] p-8 md:p-10 shadow-2xl">
+            <h2 class="text-emerald-500 font-black text-xs uppercase tracking-widest mb-6">Projelerim</h2>
+            <div class="space-y-4">
+                <div class="p-5 rounded-2xl border border-white/5 hover:bg-white/5 transition-all">
+                    <h3 class="font-bold text-slate-100 italic">Java Algoritma Çalışmaları</h3>
+                    <p class="text-sm text-slate-400 mt-1">String metodları ve temel veri yapıları üzerine pratikler.</p>
+                </div>
+                <div class="p-5 rounded-2xl border border-white/5 hover:bg-white/5 transition-all">
+                    <h3 class="font-bold text-slate-100 italic">Yapay Zeka Sektörel Analiz</h3>
+                    <p class="text-sm text-slate-400 mt-1">Sektörün geleceği üzerine hazırladığım teknik rapor.</p>
                 </div>
             </div>
+        </section>
+
+        <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <a href="https://github.com/Hasankr-27" target="_blank" class="flex-1 py-4 bg-white text-black rounded-2xl font-black text-center transition-all hover:bg-slate-200 active:scale-95 uppercase text-sm tracking-wider">
+                GITHUB
+            </a>
+            <a href="https://www.linkedin.com/in/hasan-kara-707409291/" target="_blank" class="flex-1 py-4 border border-white/20 hover:bg-white/5 rounded-2xl font-black text-center transition-all active:scale-95 uppercase text-sm tracking-wider">
+                LINKEDIN
+            </a>
         </div>
-
-      <div class="mt-10 flex flex-col sm:flex-row gap-4">
-    <a href="https://github.com/Hasankr-27" target="_blank" class="flex-1 py-4 bg-blue-600 hover:bg-blue-500 rounded-2xl font-bold text-center transition-all shadow-lg shadow-blue-600/20 active:scale-95">
-        GitHub Profilim
-    </a>
-    <a href="https://www.linkedin.com/in/hasan-kara-707409291/" target="_blank" class="flex-1 py-4 bg-slate-700 hover:bg-slate-600 rounded-2xl font-bold text-center transition-all active:scale-95">
-        LinkedIn
-    </a>
-</div>
 
         <div class="mt-10 text-center text-xs text-slate-500 uppercase tracking-[0.2em] font-semibold">
-            © 2026 • Mühendislik Portfolyosu
+            © 2026 • HASAN KARA Portfolyo
         </div>
     </div>
 
 </body>
 </html>
-
