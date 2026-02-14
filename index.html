@@ -7,83 +7,139 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
-        body { background-color: #030712; color: #f8fafc; font-family: 'Plus Jakarta Sans', sans-serif; background-image: linear-gradient(to bottom, rgba(3, 7, 18, 0.9), rgba(3, 7, 18, 0.95)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-attachment: fixed; }
-        .glass-card { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); transition: 0.5s; }
-        .hero-text { background: linear-gradient(135deg, #fff 30%, #38bdf8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .typing-text { display: inline-block; white-space: nowrap; overflow: hidden; border-right: 3px solid #38bdf8; animation: typing 2.5s steps(20, end) forwards, hide-caret 0.5s step-end 2.5s forwards; }
+        
+        body { 
+            background-color: #030712; 
+            color: #f8fafc; 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            overflow-x: hidden;
+            background-image: linear-gradient(to bottom, rgba(3, 7, 18, 0.9), rgba(3, 7, 18, 0.95)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        
+        .glass-card { 
+            background: rgba(15, 23, 42, 0.7); 
+            backdrop-filter: blur(12px); 
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.5s ease;
+        }
+
+        .glass-card:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            box-shadow: 0 0 40px rgba(56, 189, 248, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .typing-container { display: inline-block; }
+
+        .typing-text {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid #38bdf8;
+            animation: typing 2.5s steps(20, end) forwards, hide-caret 0.5s step-end 2.5s forwards;
+        }
+
         @keyframes typing { from { width: 0 } to { width: 100% } }
         @keyframes hide-caret { from, to { border-color: transparent } }
+
+        .hero-text {
+            background: linear-gradient(135deg, #fff 30%, #38bdf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .fade-in {
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body class="min-h-screen py-12 px-6">
+
     <div class="max-w-6xl mx-auto">
-        <header class="text-center mb-20">
+        
+        <header class="text-center mb-20 fade-in">
             <div class="h-24 md:h-32 flex items-center justify-center">
-                <h1 class="text-5xl md:text-8xl font-extrabold hero-text tracking-tighter typing-text">HASAN KARA</h1>
+                <div class="typing-container">
+                    <h1 class="text-5xl md:text-8xl font-extrabold hero-text tracking-tighter typing-text">
+                        HASAN KARA
+                    </h1>
+                </div>
             </div>
-            <p class="text-blue-400 font-bold tracking-[0.3em] text-xs uppercase opacity-80 mt-4">Yazılım Mühendisi</p>
+            <p class="text-blue-400 font-bold tracking-[0.4em] text-xs uppercase opacity-80 mt-4">Yazılım Mühendisi</p>
         </header>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-            <div class="lg:col-span-5 space-y-8">
+            
+            <div class="lg:col-span-5 space-y-8 fade-in" style="animation-delay: 0.3s;">
                 <section class="glass-card rounded-[2.5rem] p-8 md:p-10">
                     <h2 class="text-blue-500 font-black text-xs uppercase tracking-widest mb-6 italic">Hakkımda</h2>
                     <p class="text-slate-300 leading-relaxed text-lg font-light">
-                        Fırat Üniversitesi Yazılım Mühendisliği 1. sınıf öğrencisiyim. Kariyerimi <strong>Yapay Zeka ve Otomasyon</strong> alanında inşa etmeyi hedefliyorum.
+                        Fırat Üniversitesi Yazılım Mühendisliği 1. sınıf öğrencisiyim. Kariyerimi <strong>Yapay Zeka ve Otomasyon</strong> alanında uzmanlaşarak inşa etmeyi hedefliyorum. Python ve Java dilleri üzerinde aktif olarak çalışmaktayım.
                     </p>
                     
                     <div class="mt-10 pt-8 border-t border-white/5 space-y-4">
-                        <button onclick="handleMail()" class="w-full flex items-center gap-4 p-4 rounded-2xl bg-white/5 hover:bg-blue-500/10 transition-all border border-white/5 group">
-                            <span class="text-xl">📧</span>
-                            <div class="flex flex-col items-start text-left">
-                                <span id="mailText" class="text-sm font-medium italic group-hover:text-blue-400">hasankara0870@gmail.com</span>
-                                <span id="hint" class="text-[10px] text-slate-500 uppercase tracking-widest">Tıkla ve Mail Gönder</span>
-                            </div>
-                        </button>
                         <a href="https://www.linkedin.com/in/hasan-kara-707409291/" target="_blank" class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 hover:bg-indigo-500/10 transition-all border border-white/5 group">
                             <span class="text-xl">💼</span>
-                            <span class="text-sm font-medium italic group-hover:text-indigo-400">LinkedIn Profilim</span>
+                            <span class="text-sm font-medium italic group-hover:text-indigo-400 transition-colors">LinkedIn Profilim</span>
                         </a>
                     </div>
                 </section>
             </div>
 
-            <div class="lg:col-span-7 space-y-8">
+            <div class="lg:col-span-7 space-y-8 fade-in" style="animation-delay: 0.6s;">
+                
                 <section class="glass-card rounded-[2.5rem] p-8">
                     <h2 class="text-emerald-500 font-black text-xs uppercase tracking-widest mb-6 italic">Hedeflerim</h2>
-                    <div class="p-5 rounded-2xl bg-slate-900/40 border border-white/5">
-                        <h3 class="text-white font-bold italic">AI & Otonom Sistemler</h3>
-                        <p class="text-slate-400 text-sm mt-2">Karmaşık problemleri akıllı algoritmalarla çözmek.</p>
+                    <div class="space-y-4">
+                        <div class="p-5 rounded-2xl bg-slate-900/40 border border-white/5">
+                            <h3 class="text-white font-bold italic">AI & Veri Bilimi Uzmanlığı</h3>
+                            <p class="text-slate-400 text-sm mt-2">Karmaşık sektör problemlerini yapay zeka ve veri analizi yöntemleriyle çözmek.</p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-slate-900/40 border border-white/5">
+                            <h3 class="text-white font-bold italic">Otonom Sistemler</h3>
+                            <p class="text-slate-400 text-sm mt-2">Robotik teknolojileri kullanarak verimliliği artıran otonom yazılımlar üretmek.</p>
+                        </div>
                     </div>
                 </section>
+
                 <section class="glass-card rounded-[2.5rem] p-8">
-                    <h2 class="text-orange-500 font-black text-xs uppercase tracking-widest mb-6 italic">GitHub</h2>
-                    <a href="https://github.com/Hasankr-27" target="_blank" class="block p-5 rounded-2xl bg-white text-black hover:bg-slate-200 transition-all text-center font-black uppercase text-xs">PROJELERİME GÖZ AT</a>
+                    <h2 class="text-orange-500 font-black text-xs uppercase tracking-widest mb-6 italic">GitHub & Projeler</h2>
+                    <div class="space-y-4">
+                        <a href="https://github.com/Hasankr-27" target="_blank" class="block p-5 rounded-2xl bg-white text-black hover:bg-slate-200 transition-all text-center font-black uppercase text-xs tracking-widest">
+                            PROJELERİME GÖZ AT
+                        </a>
+                        <div class="p-5 rounded-2xl border border-white/5 bg-slate-900/20">
+                            <h4 class="text-white font-bold text-sm italic">Java Algoritma Çalışmaları</h4>
+                            <p class="text-xs text-slate-500 mt-1">String metodları ve temel veri yapıları pratikleri.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="glass-card rounded-[2.5rem] p-8">
+                    <h2 class="text-purple-500 font-black text-xs uppercase tracking-widest mb-6 italic">İlgi Alanları</h2>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-semibold">Robotik</span>
+                        <span class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-semibold">Yapay Zeka</span>
+                        <span class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-semibold">Veri Bilimi</span>
+                    </div>
                 </section>
             </div>
         </div>
+
+        <footer class="mt-20 text-center">
+            <p class="text-[10px] text-slate-600 uppercase tracking-[0.5em] font-bold">
+                &copy; 2026 • HASAN KARA • Yazılım Mühendisi
+            </p>
+        </footer>
     </div>
 
-    <script>
-        function handleMail() {
-            const email = "hasankara0870@gmail.com";
-            const hint = document.getElementById('hint');
-            
-            // 1. Mail uygulamasını açmayı dene
-            window.location.href = "mailto:" + email;
-            
-            // 2. Aynı zamanda kopyala (önlem olarak)
-            navigator.clipboard.writeText(email);
-            
-            // 3. Kullanıcıya geri bildirim ver
-            hint.innerText = "KOPYALANDI & UYGULAMA AÇILIYOR...";
-            hint.classList.add('text-blue-400');
-            
-            setTimeout(() => {
-                hint.innerText = "Tıkla ve Mail Gönder";
-                hint.classList.remove('text-blue-400');
-            }, 3000);
-        }
-    </script>
 </body>
 </html>
