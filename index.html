@@ -3,83 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HASAN KARA | Yazılım Mühendisi</title>
+    <title>HASAN KARA | Software Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-        body { background-color: #020617; color: #f8fafc; font-family: 'Inter', sans-serif; }
-        .glass-card { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .name-title { letter-spacing: 0.2em; text-transform: uppercase; font-weight: 900; }
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        
+        :root {
+            --bg-deep: #030712;
+            --accent-blue: #38bdf8;
+            --accent-purple: #818cf8;
+        }
+
+        body { 
+            background-color: var(--bg-deep); 
+            color: #f8fafc; 
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(129, 140, 248, 0.05) 0%, transparent 40%);
+        }
+
+        .glass-card { 
+            background: rgba(15, 23, 42, 0.6); 
+            backdrop-filter: blur(20px); 
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-text {
+            background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.02em;
+        }
+
+        .badge {
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            color: var(--accent-blue);
+        }
+
+        .glow-button {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glow-button:hover {
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+            transform: translateY(-2px);
+        }
     </style>
 </head>
-<body class="min-h-screen py-16 px-4">
+<body class="min-h-screen py-20 px-6">
 
-    <div class="max-w-3xl mx-auto space-y-10">
+    <div class="max-w-4xl mx-auto space-y-12">
         
-        <div class="text-center py-10">
-            <h1 class="text-4xl md:text-7xl name-title mb-4 bg-clip-text text-transparent bg-gradient-to-b from-white to-slate-500">
+        <header class="text-center space-y-4 mb-20">
+            <div class="inline-block px-4 py-1 rounded-full badge text-xs font-bold tracking-widest uppercase mb-4">
+                Mühendislik Portfolyosu v2.0
+            </div>
+            <h1 class="text-6xl md:text-8xl font-extrabold hero-text leading-tight">
                 HASAN KARA
             </h1>
-            <p class="text-blue-400 font-bold tracking-[0.4em] text-xs md:text-sm uppercase opacity-80">
-                Yazılım Mühendisi
+            <p class="text-slate-400 text-lg md:text-xl font-light tracking-[0.3em] uppercase">
+                Yazılım Mühendisi <span class="text-blue-500 mx-2">•</span> <span class="text-slate-500">AI & Automation</span>
             </p>
-        </div>
+        </header>
 
-        <section class="glass-card rounded-[2rem] p-8 md:p-10 shadow-2xl">
-            <h2 class="text-blue-500 font-black text-xs uppercase tracking-widest mb-4">Hakkımda</h2>
-            <p class="text-slate-300 leading-relaxed text-lg">
-                Fırat Üniversitesi'nde 1. sınıf Yazılım Mühendisliği öğrencisiyim. Kariyerimi <strong>Yapay Zeka ve Otomasyon</strong> alanında uzmanlaşarak inşa etmeyi hedefliyorum. Python ve Java dilleri üzerinde aktif olarak çalışmaktayım.
+        <section class="glass-card rounded-[3rem] p-10 md:p-14 relative overflow-hidden group">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 blur-[80px] group-hover:bg-blue-500/20 transition-all"></div>
+            <h2 class="text-blue-400 font-bold text-sm uppercase tracking-[0.2em] mb-6 flex items-center gap-2">
+                <span class="w-8 h-[1px] bg-blue-400"></span> Hakkımda
+            </h2>
+            <p class="text-slate-300 leading-relaxed text-xl font-light">
+                Fırat Üniversitesi'nde 1. sınıf Yazılım Mühendisliği öğrencisiyim. Kariyerimi <span class="text-white font-medium">Yapay Zeka ve Otomasyon</span> alanında uzmanlaşarak inşa etmeyi hedefliyorum. Python ve Java dilleri üzerinde aktif olarak çalışmaktayım.
             </p>
         </section>
 
-        <section class="glass-card rounded-[2rem] p-8 md:p-10 shadow-2xl">
-            <h2 class="text-indigo-500 font-black text-xs uppercase tracking-widest mb-6">İlgi Alanları</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="p-5 rounded-2xl bg-slate-900/30 border border-white/5">
-                    <span class="text-white font-bold block mb-1">Robotik & Otomasyon</span>
-                    <p class="text-xs text-slate-400">Otonom sistemler ve kontrol mekanizmaları tasarımı.</p>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <section class="glass-card rounded-[2.5rem] p-10">
+                <h2 class="text-indigo-400 font-bold text-sm uppercase tracking-[0.2em] mb-8">Uzmanlık Alanları</h2>
+                <div class="grid gap-4">
+                    <div class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/5">
+                        <span class="text-2xl">🤖</span>
+                        <div>
+                            <h3 class="text-white font-semibold">Robotik & Otomasyon</h3>
+                            <p class="text-xs text-slate-500">Otonom kontrol sistemleri.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/5">
+                        <span class="text-2xl">🧠</span>
+                        <div>
+                            <h3 class="text-white font-semibold">Yapay Zeka</h3>
+                            <p class="text-xs text-slate-500">Makine öğrenmesi modelleri.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/5">
+                        <span class="text-2xl">📊</span>
+                        <div>
+                            <h3 class="text-white font-semibold">Veri Bilimi</h3>
+                            <p class="text-xs text-slate-500">Analitik modelleme süreçleri.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="p-5 rounded-2xl bg-slate-900/30 border border-white/5">
-                    <span class="text-white font-bold block mb-1">Mobil Uygulama</span>
-                    <p class="text-xs text-slate-400">Kullanıcı odaklı modern mobil yazılım çözümleri.</p>
-                </div>
-                <div class="p-5 rounded-2xl bg-slate-900/30 border border-white/5">
-                    <span class="text-white font-bold block mb-1">Yapay Zeka</span>
-                    <p class="text-xs text-slate-400">Makine öğrenmesi ve akıllı algoritma geliştirme.</p>
-                </div>
-                <div class="p-5 rounded-2xl bg-slate-900/30 border border-white/5">
-                    <span class="text-white font-bold block mb-1">Veri Bilimi</span>
-                    <p class="text-xs text-slate-400">Büyük veri analizi ve anlamlı veri modelleri oluşturma.</p>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="glass-card rounded-[2rem] p-8 md:p-10 shadow-2xl">
-            <h2 class="text-emerald-500 font-black text-xs uppercase tracking-widest mb-6">Hedeflerim</h2>
-            <div class="space-y-4">
-                <div class="p-5 rounded-2xl border border-white/5 bg-slate-900/20">
-                    <h3 class="font-bold text-slate-100 italic">Yapay Zeka Uzmanlığı</h3>
-                    <p class="text-sm text-slate-400 mt-1">Sektördeki karmaşık problemleri yapay zeka ve veri analizi yöntemleriyle çözen projelere imza atmak.</p>
+            <section class="glass-card rounded-[2.5rem] p-10">
+                <h2 class="text-emerald-400 font-bold text-sm uppercase tracking-[0.2em] mb-8">Vizyon & Hedefler</h2>
+                <div class="space-y-6">
+                    <div class="relative pl-6 border-l-2 border-emerald-500/30">
+                        <h3 class="text-white font-bold italic">AI Uzmanlığı</h3>
+                        <p class="text-sm text-slate-400 mt-2">Karmaşık sektör problemlerini veri analizi ile çözmek.</p>
+                    </div>
+                    <div class="relative pl-6 border-l-2 border-emerald-500/30">
+                        <h3 class="text-white font-bold italic">Otonom Gelecek</h3>
+                        <p class="text-sm text-slate-400 mt-2">İnsan hayatını kolaylaştıran robotik yazılımlar.</p>
+                    </div>
                 </div>
-                <div class="p-5 rounded-2xl border border-white/5 bg-slate-900/20">
-                    <h3 class="font-bold text-slate-100 italic">Otonom Sistemler Geliştirmek</h3>
-                    <p class="text-sm text-slate-400 mt-1">Robotik ve otomasyonu birleştirerek insan hayatını kolaylaştıran yazılımlar üretmek.</p>
-                </div>
-            </div>
-        </section>
-
-        <div class="flex flex-col sm:flex-row gap-4 pt-4">
-            <a href="https://github.com/Hasankr-27" target="_blank" class="flex-1 py-4 bg-white text-black rounded-2xl font-black text-center transition-all hover:bg-slate-200 active:scale-95 uppercase text-sm tracking-wider">
-                GITHUB
-            </a>
-            <a href="https://www.linkedin.com/in/hasan-kara-707409291/" target="_blank" class="flex-1 py-4 border border-white/20 hover:bg-white/5 rounded-2xl font-black text-center transition-all active:scale-95 uppercase text-sm tracking-wider">
-                LINKEDIN
-            </a>
+            </section>
         </div>
 
-        <div class="mt-10 text-center text-xs text-slate-500 uppercase tracking-[0.2em] font-semibold">
-            © 2026 • HASAN KARA Portfolyo
-        </div>
+        <footer class="pt-10 space-y-10">
+            <div class="flex flex-col md:flex-row gap-6">
+                <a href="https://github.com/Hasankr-27" target="_blank" class="glow-button flex-1 py-5 bg-white text-black rounded-3xl font-extrabold text-center uppercase tracking-tighter transition-all">
+                    GitHub / PROJELER
+                </a>
+                <a href="https://www.linkedin.com/in/hasan-kara-707409291/" target="_blank" class="glow-button flex-1 py-5 border border-white/10 bg-white/5 hover:bg-white/10 rounded-3xl font-extrabold text-center uppercase tracking-tighter transition-all">
+                    LinkedIn / BAĞLANTI
+                </a>
+            </div>
+            
+            <div class="text-center">
+                <p class="text-[10px] text-slate-600 uppercase tracking-[0.5em] font-bold">
+                    &copy; 2026 • HASAN KARA • ELAZIĞ-GAZİANTEP
+                </p>
+            </div>
+        </footer>
     </div>
 
 </body>
