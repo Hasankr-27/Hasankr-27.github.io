@@ -50,13 +50,22 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        .fade-in {
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body class="min-h-screen py-12 px-6">
 
     <div class="max-w-6xl mx-auto">
         
-        <header class="text-center mb-20">
+        <header class="text-center mb-20 fade-in">
             <div class="h-24 md:h-32 flex items-center justify-center">
                 <div class="typing-container">
                     <h1 class="text-5xl md:text-8xl font-extrabold hero-text tracking-tighter typing-text">
@@ -69,7 +78,7 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
             
-            <div class="lg:col-span-5 space-y-8">
+            <div class="lg:col-span-5 space-y-8 fade-in" style="animation-delay: 0.3s;">
                 <section class="glass-card rounded-[2.5rem] p-8 md:p-10">
                     <h2 class="text-blue-500 font-black text-xs uppercase tracking-widest mb-6 italic">Hakkımda</h2>
                     <p class="text-slate-300 leading-relaxed text-lg font-light">
@@ -77,20 +86,24 @@
                     </p>
                     
                     <div class="mt-10 pt-8 border-t border-white/5 space-y-4">
-                <a href="mailto:hasankarabs27@gmail.com" class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 hover:bg-blue-500/10 transition-all border border-white/5">
-                    <span class="text-xl">📧</span>
-                    <span class="text-sm font-medium italic">hasankara0870@gmail.com</span>
-                    </a>
-            </div>
-                        <a href="https://www.linkedin.com/in/hasan-kara-707409291/" target="_blank" class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 hover:bg-indigo-500/10 transition-all border border-white/5">
+                        <button onclick="copyEmail()" class="w-full flex items-center gap-4 p-4 rounded-2xl bg-white/5 hover:bg-blue-500/10 transition-all border border-white/5 group relative">
+                            <span class="text-xl">📧</span>
+                            <div class="flex flex-col items-start">
+                                <span id="emailText" class="text-sm font-medium italic group-hover:text-blue-400 transition-colors">hasankarabs27@gmail.com</span>
+                                <span id="copyStatus" class="text-[10px] text-slate-500 uppercase tracking-widest hidden">Kopyalandı!</span>
+                            </div>
+                            <span class="ml-auto text-[10px] text-slate-600 uppercase font-bold group-hover:text-blue-500 transition-all">Kopyala</span>
+                        </button>
+
+                        <a href="https://www.linkedin.com/in/hasan-kara-707409291/" target="_blank" class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 hover:bg-indigo-500/10 transition-all border border-white/5 group">
                             <span class="text-xl">💼</span>
-                            <span class="text-sm font-medium italic">LinkedIn Profilim</span>
+                            <span class="text-sm font-medium italic group-hover:text-indigo-400 transition-colors">LinkedIn Profilim</span>
                         </a>
                     </div>
                 </section>
             </div>
 
-            <div class="lg:col-span-7 space-y-8">
+            <div class="lg:col-span-7 space-y-8 fade-in" style="animation-delay: 0.6s;">
                 
                 <section class="glass-card rounded-[2.5rem] p-8">
                     <h2 class="text-emerald-500 font-black text-xs uppercase tracking-widest mb-6 italic">Hedeflerim</h2>
@@ -101,16 +114,22 @@
                         </div>
                         <div class="p-5 rounded-2xl bg-slate-900/40 border border-white/5">
                             <h3 class="text-white font-bold italic">Otonom Sistemler</h3>
-                            <p class="text-slate-400 text-sm mt-2">İnsan hayatını kolaylaştıran robotik yazılımlar üretmek.</p>
+                            <p class="text-slate-400 text-sm mt-2">Robotik teknolojileri kullanarak verimliliği artıran otonom yazılımlar üretmek.</p>
                         </div>
                     </div>
                 </section>
 
-                <section class="glass-card rounded-[2.5rem] p-8 text-center">
-                    <h2 class="text-orange-500 font-black text-xs uppercase tracking-widest mb-6 italic">GitHub</h2>
-                    <a href="https://github.com/Hasankr-27" target="_blank" class="block w-full p-5 rounded-2xl bg-white text-black hover:bg-slate-200 transition-all font-black uppercase text-xs tracking-widest">
-                        PROJELERİME GÖZ AT
-                    </a>
+                <section class="glass-card rounded-[2.5rem] p-8">
+                    <h2 class="text-orange-500 font-black text-xs uppercase tracking-widest mb-6 italic">GitHub & Projeler</h2>
+                    <div class="space-y-4">
+                        <a href="https://github.com/Hasankr-27" target="_blank" class="block p-5 rounded-2xl bg-white text-black hover:bg-slate-200 transition-all text-center font-black uppercase text-xs tracking-widest shadow-lg">
+                            PROJELERİME GÖZ AT
+                        </a>
+                        <div class="p-5 rounded-2xl border border-white/5 bg-slate-900/20">
+                            <h4 class="text-white font-bold text-sm italic">Java Algoritma Çalışmaları</h4>
+                            <p class="text-xs text-slate-500 mt-1">String metodları ve temel veri yapıları üzerine pratikler.</p>
+                        </div>
+                    </div>
                 </section>
 
                 <section class="glass-card rounded-[2.5rem] p-8">
@@ -119,7 +138,6 @@
                         <span class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-semibold">Robotik</span>
                         <span class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-semibold">Yapay Zeka</span>
                         <span class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-semibold">Veri Bilimi</span>
-                        <span class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-semibold">Mobil Uygulama</span>
                     </div>
                 </section>
             </div>
@@ -132,6 +150,25 @@
         </footer>
     </div>
 
+    <script>
+        function copyEmail() {
+            const email = "hasankarabs27@gmail.com";
+            navigator.clipboard.writeText(email).then(() => {
+                const status = document.getElementById('copyStatus');
+                const text = document.getElementById('emailText');
+                
+                status.classList.remove('hidden');
+                text.classList.add('text-blue-400');
+                
+                // Mail uygulamasını da tetikler
+                window.location.href = "mailto:" + email;
+
+                setTimeout(() => {
+                    status.classList.add('hidden');
+                    text.classList.remove('text-blue-400');
+                }, 2000);
+            });
+        }
+    </script>
 </body>
 </html>
-
