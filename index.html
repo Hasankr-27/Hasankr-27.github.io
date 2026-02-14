@@ -73,7 +73,7 @@
                     </h1>
                 </div>
             </div>
-            <p class="text-blue-400 font-bold tracking-[0.4em] text-xs uppercase opacity-80 mt-4">Yazılım Mühendisi</p>
+            <p class="text-blue-400 font-bold tracking-[0.3em] text-xs uppercase opacity-80 mt-4">Yazılım Mühendisi</p>
         </header>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -86,14 +86,13 @@
                     </p>
                     
                     <div class="mt-10 pt-8 border-t border-white/5 space-y-4">
-                        <button onclick="copyEmail()" class="w-full flex items-center gap-4 p-4 rounded-2xl bg-white/5 hover:bg-blue-500/10 transition-all border border-white/5 group relative">
+                        <a href="mailto:hasankarabs27@gmail.com" class="w-full flex items-center gap-4 p-4 rounded-2xl bg-white/5 hover:bg-blue-500/10 transition-all border border-white/5 group">
                             <span class="text-xl">📧</span>
                             <div class="flex flex-col items-start">
-                                <span id="emailText" class="text-sm font-medium italic group-hover:text-blue-400 transition-colors">hasankarabs27@gmail.com</span>
-                                <span id="copyStatus" class="text-[10px] text-slate-500 uppercase tracking-widest hidden">Kopyalandı!</span>
+                                <span class="text-sm font-medium italic group-hover:text-blue-400 transition-colors">hasankara0870@gmail.com</span>
                             </div>
-                            <span class="ml-auto text-[10px] text-slate-600 uppercase font-bold group-hover:text-blue-500 transition-all">Kopyala</span>
-                        </button>
+                            <span class="ml-auto text-[10px] text-slate-600 uppercase font-bold group-hover:text-blue-500 transition-all">E-Posta Gönder</span>
+                        </a>
 
                         <a href="https://www.linkedin.com/in/hasan-kara-707409291/" target="_blank" class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 hover:bg-indigo-500/10 transition-all border border-white/5 group">
                             <span class="text-xl">💼</span>
@@ -110,11 +109,11 @@
                     <div class="space-y-4">
                         <div class="p-5 rounded-2xl bg-slate-900/40 border border-white/5">
                             <h3 class="text-white font-bold italic">AI & Veri Bilimi Uzmanlığı</h3>
-                            <p class="text-slate-400 text-sm mt-2">Sektörel problemleri akıllı algoritmalarla çözmek.</p>
+                            <p class="text-slate-400 text-sm mt-2">Karmaşık sektör problemlerini akıllı algoritmalarla çözmek.</p>
                         </div>
                         <div class="p-5 rounded-2xl bg-slate-900/40 border border-white/5">
                             <h3 class="text-white font-bold italic">Otonom Sistemler</h3>
-                            <p class="text-slate-400 text-sm mt-2">Robotik teknolojileri kullanarak verimliliği artıran otonom yazılımlar üretmek.</p>
+                            <p class="text-slate-400 text-sm mt-2">İnsan hayatını kolaylaştıran robotik yazılımlar üretmek.</p>
                         </div>
                     </div>
                 </section>
@@ -122,12 +121,12 @@
                 <section class="glass-card rounded-[2.5rem] p-8">
                     <h2 class="text-orange-500 font-black text-xs uppercase tracking-widest mb-6 italic">GitHub & Projeler</h2>
                     <div class="space-y-4">
-                        <a href="https://github.com/Hasankr-27" target="_blank" class="block p-5 rounded-2xl bg-white text-black hover:bg-slate-200 transition-all text-center font-black uppercase text-xs tracking-widest shadow-lg">
+                        <a href="https://github.com/Hasankr-27" target="_blank" class="block p-5 rounded-2xl bg-white text-black hover:bg-slate-200 transition-all text-center font-black uppercase text-xs tracking-widest">
                             PROJELERİME GÖZ AT
                         </a>
                         <div class="p-5 rounded-2xl border border-white/5 bg-slate-900/20">
                             <h4 class="text-white font-bold text-sm italic">Java Algoritma Çalışmaları</h4>
-                            <p class="text-xs text-slate-500 mt-1">String metodları ve temel veri yapıları üzerine pratikler.</p>
+                            <p class="text-xs text-slate-500 mt-1">String metodları ve temel veri yapıları pratikleri.</p>
                         </div>
                     </div>
                 </section>
@@ -150,26 +149,5 @@
         </footer>
     </div>
 
-    <script>
-        function copyEmail() {
-            const email = "hasankara0870@gmail.com";
-            navigator.clipboard.writeText(email).then(() => {
-                const status = document.getElementById('copyStatus');
-                const text = document.getElementById('emailText');
-                
-                status.classList.remove('hidden');
-                text.classList.add('text-blue-400');
-                
-                // Mail uygulamasını da tetikler
-                window.location.href = "mailto:" + email;
-
-                setTimeout(() => {
-                    status.classList.add('hidden');
-                    text.classList.remove('text-blue-400');
-                }, 2000);
-            });
-        }
-    </script>
 </body>
 </html>
-
