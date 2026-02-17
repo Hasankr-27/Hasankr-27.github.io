@@ -30,6 +30,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            text-decoration: none; /* Link alt çizgisini kaldırır */
         }
 
         .bento-card:hover {
@@ -66,7 +67,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* İkon Kutuları */
         .icon-box {
             width: 40px;
             height: 40px;
@@ -110,7 +110,7 @@
             </div>
 
             <div class="flex flex-wrap gap-4 mt-auto">
-                <a href="mailto:hasankara0870@gmail.com" class="px-6 py-3 bg-white text-slate-900 rounded-xl font-bold text-sm hover:bg-sky-50 transition flex items-center gap-2 shadow-lg shadow-white/5">
+                <a href="mailto:hasankara0870@gmail.com" class="px-6 py-3 bg-white text-slate-900 rounded-xl font-bold text-sm hover:bg-sky-50 transition flex items-center gap-2 shadow-lg shadow-white/5 relative z-10">
                     <i class="fas fa-paper-plane"></i> İletişime Geç
                 </a>
             </div>
@@ -156,37 +156,37 @@
             </div>
         </div>
 
-        <div class="bento-card col-span-1 md:col-span-2 p-8 flex-row items-center justify-between !bg-gradient-to-r !from-slate-900 !to-slate-800 border-green-500/20 group hover:border-green-500/40 relative overflow-hidden">
+        <a href="https://www.shopier.com/m/products.php" target="_blank" class="bento-card col-span-1 md:col-span-2 p-8 flex-row items-center justify-between !bg-gradient-to-r !from-slate-900 !to-slate-800 border-green-500/20 group hover:border-green-500/40 relative overflow-hidden cursor-pointer">
             <div class="absolute top-0 right-0 w-full h-full bg-green-500/5 rounded-full blur-3xl pointer-events-none opacity-50"></div>
             
             <div class="z-10">
                 <span class="text-[10px] font-bold tracking-widest text-green-400 uppercase bg-green-500/10 px-2 py-1 rounded mb-2 inline-block">Store</span>
-                <h2 class="text-3xl font-bold text-white mb-1">Shopier Mağazam</h2>
+                <h2 class="text-3xl font-bold text-white mb-1 group-hover:text-green-400 transition-colors">Shopier Mağazam</h2>
                 <p class="text-base text-slate-400">Dijital ürünlerime ve projelerime göz atın.</p>
             </div>
             
-            <a href="https://www.shopier.com/m/products.php" target="_blank" class="w-24 h-24 rounded-full bg-green-500 flex items-center justify-center text-white text-4xl shadow-2xl shadow-green-500/30 group-hover:scale-110 transition-transform z-10">
+            <div class="w-24 h-24 rounded-full bg-green-500 flex items-center justify-center text-white text-4xl shadow-2xl shadow-green-500/30 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 z-10">
                 <i class="fas fa-shopping-bag"></i>
-            </a>
-        </div>
+            </div>
+        </a>
 
         <div class="col-span-1 md:col-span-3 grid grid-cols-2 gap-6">
-            <a href="https://www.linkedin.com/in/hasan-kara-707409291/" target="_blank" class="bento-card p-6 !flex-row items-center gap-4 group hover:bg-blue-600/10 hover:border-blue-500/30">
+            <a href="https://www.linkedin.com/in/hasan-kara-707409291/" target="_blank" class="bento-card p-6 !flex-row items-center gap-4 group hover:bg-blue-600/10 hover:border-blue-500/30 cursor-pointer">
                 <div class="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-400 text-xl group-hover:scale-110 transition-transform">
                     <i class="fab fa-linkedin-in"></i>
                 </div>
                 <div>
-                    <h3 class="font-bold text-slate-200">LinkedIn</h3>
+                    <h3 class="font-bold text-slate-200 group-hover:text-blue-400 transition-colors">LinkedIn</h3>
                     <p class="text-xs text-slate-500">Profesyonel Ağ</p>
                 </div>
             </a>
 
-            <a href="https://github.com/Hasankr-27" target="_blank" class="bento-card p-6 !flex-row items-center gap-4 group hover:bg-slate-700/30 hover:border-slate-500/30">
+            <a href="https://github.com/Hasankr-27" target="_blank" class="bento-card p-6 !flex-row items-center gap-4 group hover:bg-slate-700/30 hover:border-slate-500/30 cursor-pointer">
                 <div class="w-12 h-12 rounded-xl bg-slate-500/20 flex items-center justify-center text-slate-300 text-xl group-hover:scale-110 transition-transform">
                     <i class="fab fa-github"></i>
                 </div>
                 <div>
-                    <h3 class="font-bold text-slate-200">GitHub</h3>
+                    <h3 class="font-bold text-slate-200 group-hover:text-slate-300 transition-colors">GitHub</h3>
                     <p class="text-xs text-slate-500">Kod Deposu</p>
                 </div>
             </a>
