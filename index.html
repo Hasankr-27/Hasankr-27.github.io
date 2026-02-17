@@ -79,22 +79,17 @@
         }
     </style>
 </head>
-<body class="min-h-screen py-12 px-4 md:px-8 max-w-7xl mx-auto">
+<body class="min-h-screen py-12 px-4 md:px-8 max-w-7xl mx-auto flex flex-col justify-center">
 
     <header class="text-center mb-16 fade-in">
-        <div class="h-20 md:h-24 flex items-center justify-center mb-4">
-            <div class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-slate-800 border border-white/10 flex items-center justify-center text-4xl shadow-2xl shadow-blue-500/20">
-                👨‍💻
-            </div>
-        </div>
         <div class="h-16 flex items-center justify-center">
             <div class="typing-container">
-                <h1 class="text-4xl md:text-6xl font-extrabold hero-text tracking-tight typing-text">
+                <h1 class="text-5xl md:text-7xl font-extrabold hero-text tracking-tight typing-text">
                     Hasan <span class="text-sky-400">Kara</span>
                 </h1>
             </div>
         </div>
-        <p class="text-slate-400 font-medium text-sm md:text-base mt-2">Software Engineer creating seamless digital experiences.</p>
+        <p class="text-slate-400 font-medium text-sm md:text-base mt-4">Software Engineer creating seamless digital experiences.</p>
     </header>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 fade-in" style="animation-delay: 0.2s;">
@@ -161,13 +156,16 @@
             </div>
         </div>
 
-        <div class="bento-card col-span-1 md:col-span-2 p-8 flex-row items-center !bg-gradient-to-r !from-slate-900 !to-slate-800 border-pink-500/20 group hover:border-pink-500/40">
-            <div>
-                <span class="text-[10px] font-bold tracking-widest text-pink-500 uppercase bg-pink-500/10 px-2 py-1 rounded mb-2 inline-block">Store</span>
-                <h2 class="text-2xl font-bold text-white mb-1">Shopier Mağazam</h2>
-                <p class="text-sm text-slate-400">Dijital ürünlerime ve projelerime göz atın.</p>
+        <div class="bento-card col-span-1 md:col-span-2 p-8 flex-row items-center justify-between !bg-gradient-to-r !from-slate-900 !to-slate-800 border-green-500/20 group hover:border-green-500/40 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-full h-full bg-green-500/5 rounded-full blur-3xl pointer-events-none opacity-50"></div>
+            
+            <div class="z-10">
+                <span class="text-[10px] font-bold tracking-widest text-green-400 uppercase bg-green-500/10 px-2 py-1 rounded mb-2 inline-block">Store</span>
+                <h2 class="text-3xl font-bold text-white mb-1">Shopier Mağazam</h2>
+                <p class="text-base text-slate-400">Dijital ürünlerime ve projelerime göz atın.</p>
             </div>
-            <a href="https://www.shopier.com/m/products.php" target="_blank" class="w-12 h-12 rounded-full bg-pink-500 flex items-center justify-center text-white text-xl shadow-lg shadow-pink-500/20 group-hover:scale-110 transition-transform">
+            
+            <a href="https://www.shopier.com/m/products.php" target="_blank" class="w-24 h-24 rounded-full bg-green-500 flex items-center justify-center text-white text-4xl shadow-2xl shadow-green-500/30 group-hover:scale-110 transition-transform z-10">
                 <i class="fas fa-shopping-bag"></i>
             </a>
         </div>
